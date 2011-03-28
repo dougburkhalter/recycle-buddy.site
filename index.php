@@ -1,6 +1,6 @@
 <?php
 	include("topbot.inc.php");
-	$header="Welcome to <span class=\"orangelogotext\">R</span>ecycle <span class=\"orangelogotext\">B</span>uddy";
+	$header="Welcome to Recycle Buddy";
 	top("Home", $header);
 ?>
 			<div class="bodytext" style="padding:12px;" align="justify">

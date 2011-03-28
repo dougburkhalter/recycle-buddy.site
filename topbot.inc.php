@@ -1,6 +1,7 @@
 <?php
 function top($title, $header)
 {
+	$header = str_replace("Recycle Buddy", "<span class=\"orangelogotext\">R</span>ecycle <span class=\"orangelogotext\">B</span>uddy", $header);
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -73,9 +74,13 @@ function top($title, $header)
 					<a href="app.php" title="Get the Android App!">Android App</a>
 					<a href="about.php" title="About Recycle Buddy">About</a>
 					<a href="contact.php" title="Contact">Contact</a>
-					<form method="post" action="search.php" name="zipsearch" onsubmit="return checkZip()" class="linkitem">Quick Search<br /><input type="text" size="4" name="zipcode" value ="Zip Code" class="hint" maxlength="5" onfocus="toggleZip();" onblur="toggleZip();" /><input type="submit" value="&gt;" name="submit" disabled="disabled" class="nohint" /><span id="ziperror" style="display:none"><br />Please enter a<br />valid Zip Code</span></form>
+					<form method="post" action="search.php" name="zipsearch" onsubmit="return checkZip()" class="linkitem"><label for="quickzip">Quick Search</label><br /><input type="text" size="4" name="zipcode" id="quickzip" value="Zip Code" class="hint" maxlength="5" onfocus="toggleZip();" onblur="toggleZip();" /><input type="submit" value="&gt;" name="submit" disabled="disabled" class="nohint" /><span id="ziperror" style="display:none"><br />Please enter a<br />valid Zip Code</span></form>
 				</div>
-				<div align="right" style="width:189px; height:8px;"><img src="images/mnu_bottomshadow.gif" width="189" height="8" alt="mnubottomshadow" /></div>
+				<div align="right" style="width:189px; height:8px;"><img src="images/mnu_bottomshadow.gif" width="189" height="8" alt="mnubottomshadow" />&nbsp;</div>
+				<div id="menuspacer" align="center" style="height:140px;" class="smallwhitetext">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+				<div id="appcode" align="center" class="bodytext">
+					<img src="qrcode-sidebar.png" alt="QR Code for App" /><br />Download the app now to<br />your Android™ Phone!
+				</div>
 			</div>
 		<div id="contenttext">
 <?php

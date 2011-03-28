@@ -1,6 +1,6 @@
 <?php
 	include("topbot.inc.php");
-	$header="Contact <span class=\"orangelogotext\">R</span>ecycle <span class=\"orangelogotext\">B</span>uddy";
+	$header="Contact Recycle Buddy";
 	top("Contact", $header);
 ?>
 <?php
