@@ -4,10 +4,7 @@
 	top("Legal Disclaimers and Information", $header);
 ?>
 			<div class="bodytext" style="padding:12px;" align="justify">
-				<strong>Quick one-liner.</strong><br />
-				<br />
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur id est   tincidunt nisl pellentesque tincidunt. Donec in mauris. Mauris neque magna,   consectetuer id, malesuada vitae, tincidunt sit amet, mi. Aliquam lacinia.   Suspendisse potenti. Proin justo lorem, rutrum ac, facilisis in, malesuada sed,   ligula. Mauris lobortis lacus at nibh. Aenean vitae odio vel odio placerat   hendrerit. Suspendisse lacus lacus, tempor id, pharetra eget, ornare sit amet,   pede. Sed aliquet, justo ac elementum pretium, arcu leo placerat est, a luctus   purus diam eget arcu. Nam augue diam, mollis a, scelerisque eget, aliquet   condimentum, pede. Vestibulum tristique lectus sed augue.
-			</div>
+				The Recycle Buddy application contained in this website is still in its beginning versions. It is not without bugs. Use at your own discretion. The locations contained are, to the best of our knowledge, accurate and open facilities. When in doubt, please use the phone number provided to verify these locations before traveling to the facility. We are not responsible for gas used or any wear and tear on your car should you drive to one of these locations without first verifying the information. Other than the application, none of the information retrieved on the application is stored on your phone, so memory usage is kept at a minimum. These statements have not been approved by the FDA and neither the website or smartphone application is intended to treat, diagnose or cure any disease.</div>
 			<div class="panel" align="justify">
 				<div class="orangetitle">Credits &amp; Attributions</div>
 				<div class="bodytext"><br />
@@ -17,13 +14,7 @@
 					The original template used for this site is by <a href="http://www.winkhosting.com" title="Hosting Colombia">Hosting Colombia</a>. It has been modified from the original design.<br />
 				</div>
 			</div>
-			<div class="panel" align="justify">
-				<div class="orangetitle">Coming Soon</div>
-				<div class="bodytext"><br />
-					More information is coming soon. Until then, feel free to use the <a href="contact.php">Contact Form</a> for any questions or requests.			
-				</div>
-			</div>
-
+			
 <?php
 	bottom();
 ?>

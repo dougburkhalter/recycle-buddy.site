@@ -1,6 +1,7 @@
 <?php
 function top($title, $header)
 {
+	error_reporting(E_ALL ^ E_NOTICE); //Supress notices
 	$header = str_replace("Recycle Buddy", "<span class=\"orangelogotext\">R</span>ecycle <span class=\"orangelogotext\">B</span>uddy", $header);
 ?>
 
@@ -15,7 +16,7 @@ function top($title, $header)
 	<title>[Recycle Buddy] <?php echo $title; ?></title>
 	<script type="text/javascript" language="javascript"><!--
 	function toggleZip() {
-		var zipInput = document.zipsearch.zipcode;
+		var zipInput = document.zipsearch.ZipCode;
 		var zipSubmit = document.zipsearch.submit;
 		var zipError = document.getElementById("ziperror");
 		if (zipInput.value == "Zip Code" || zipInput.value == "" || (zipInput.value.length == 5 && !isNaN(zipInput.value))) {
@@ -34,7 +35,7 @@ function top($title, $header)
 		}
 	}
 	function checkZip() {
-		var zipInput = document.zipsearch.zipcode;
+		var zipInput = document.zipsearch.ZipCode;
 		var zipSubmit = document.zipsearch.submit;
 		var zipError = document.getElementById("ziperror");
 		if (zipInput.value < 9999 || zipInput.value > 100000 || isNaN(zipInput.value)) {
@@ -57,7 +58,7 @@ function top($title, $header)
 		</div>
 		<div id="header" align="center">
 			<div class="titletext" id="logo" style="background-image:url('Recycle-Buddy.png');background-repeat:no-repeat;background-position:top center;">
-				<h1 class="logotext" style="margin:30px"><span class="orangelogotext">R</span>ecycle <span class="orangelogotext">B</span>uddy</h1> 
+				<h1 class="logotext" style="margin:30px;text-shadow: white 0px 0px 10px;"><span class="orangelogotext">R</span>ecycle <span class="orangelogotext">B</span>uddy</h1> 
 			</div>
 			<div id="pagetitle">
 				<div id="title" class="titletext" align="right"><?php echo $header; ?></div>
@@ -70,11 +71,11 @@ function top($title, $header)
 					<a href="index.php" title="Home">Home</a>
 					<a href="search.php" title="Search For Recycling Centers">Search</a>
 					<a href="add.php" title="Add a Recycling Center">Add</a>
-					<a href="tips.php" title="Tips for Green Living">Green Tips</a>
+					<!--<a href="tips.php" title="Tips for Green Living">Green Tips</a>-->
 					<a href="app.php" title="Get the Android App!">Android App</a>
 					<a href="about.php" title="About Recycle Buddy">About</a>
 					<a href="contact.php" title="Contact">Contact</a>
-					<form method="post" action="search.php" name="zipsearch" onsubmit="return checkZip()" class="linkitem"><label for="quickzip">Quick Search</label><br /><input type="text" size="4" name="zipcode" id="quickzip" value="Zip Code" class="hint" maxlength="5" onfocus="toggleZip();" onblur="toggleZip();" /><input type="submit" value="&gt;" name="submit" disabled="disabled" class="nohint" /><span id="ziperror" style="display:none"><br />Please enter a<br />valid Zip Code</span></form>
+					<form method="post" action="search.php" name="zipsearch" onsubmit="return checkZip()" class="linkitem"><label for="quickzip">Quick Search</label><br /><input type="text" size="4" name="ZipCode" id="quickzip" value="Zip Code" class="hint" maxlength="5" onfocus="toggleZip();" onblur="toggleZip();" /><input type="hidden" name="App" value="Website" /><input type="submit" value="&gt;" name="submit" disabled="disabled" class="nohint" /><span id="ziperror" style="display:none"><br />Please enter a<br />valid Zip Code</span></form>
 				</div>
 				<div align="right" style="width:189px; height:8px;"><img src="images/mnu_bottomshadow.gif" width="189" height="8" alt="mnubottomshadow" />&nbsp;</div>
 				<div id="menuspacer" align="center" style="height:140px;" class="smallwhitetext">&nbsp;&nbsp;&nbsp;&nbsp;</div>
